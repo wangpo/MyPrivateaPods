@@ -1,16 +1,12 @@
 //
 //  DiskLog.h
-//  BaoFeng-iPad
+//  PrivatePodDemo
 //
-//  Created by deng on 12-8-31.
-//
+//  Created by wangpo on 2018/4/17.
+//  Copyright © 2018年 wangpo. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-
-#pragma mark -
-#pragma mark DiskLog Interface
 
 @interface DiskLog : NSObject
 
