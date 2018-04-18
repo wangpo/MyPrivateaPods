@@ -1,9 +1,9 @@
 //
-//  DiskLog.m
-//  BaoFeng-iPad
+//  DiskLog.h
+//  PrivatePodDemo
 //
-//  Created by deng on 12-8-31.
-//
+//  Created by wangpo on 2018/4/17.
+//  Copyright © 2018年 wangpo. All rights reserved.
 //
 
 #import "DiskLog.h"
@@ -14,10 +14,9 @@
 
 +(void)printLogtoDisk:(NSString*)log prefix:(NSString*)pre
 {
-#ifdef TRACE_LOG
     @synchronized(self)
     {
-        NSString *libDirectory = LIBRARY_BFCheetahData_PATH;
+        NSString *libDirectory = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"DiskLogData"];
         NSString *logPath= [libDirectory stringByAppendingPathComponent:@"log.txt"];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -43,6 +42,5 @@
         [handle writeData:data];
         [handle closeFile];
     }
-#endif
 }
 @end
