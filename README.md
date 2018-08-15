@@ -1,2 +1,2 @@
 # MyPrivateaPods
-test private pads
+私有库管理
